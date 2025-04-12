@@ -16,7 +16,7 @@ primitives and strings
 
 interfaces
 
-static methods of Collectors, Camparator, IntStream, Array, List, Set
+static methods of Collectors, Camparator, IntStream, Array, List, Set, maths
 
 
 
