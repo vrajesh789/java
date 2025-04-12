@@ -1,1 +1,48 @@
 java 8
+
+Java 8 introduced several transformative features that marked a major shift in the Java programming paradigm. Here's a detailed breakdown:
+
+1. Lambda Expressions
+- Made functional programming possible by enabling concise representation of methods.
+- Simplified writing code for single-use methods, especially in collections.
+- Example:List<String> names = Arrays.asList("Vatsalya", "Anna");
+names.forEach(name -> System.out.println(name));
+
+
+2. Stream API
+- Introduced a powerful abstraction for working with collections of data.
+- Enabled operations like filtering, mapping, and reducing in a clean, declarative style.
+- Example:List<Integer> numbers = Arrays.asList(1, 2, 3, 4);
+List<Integer> evenNumbers = numbers.stream()
+                                   .filter(n -> n % 2 == 0)
+                                   .collect(Collectors.toList());
+
+
+3. Default Methods
+- Allowed interfaces to include method implementations, providing backward compatibility.
+- Example:interface Vehicle {
+    default void start() {
+        System.out.println("Vehicle started.");
+    }
+}
+
+
+4. Optional Class
+- Introduced to address NullPointerException issues by handling null values more gracefully.
+- Example:Optional<String> name = Optional.ofNullable("Vatsalya");
+name.ifPresent(System.out::println);
+
+
+5. New Date and Time API
+- Replaced the outdated java.util.Date and java.util.Calendar APIs.
+- Added classes like LocalDate, LocalTime, and LocalDateTime for better date-time handling.
+- Example:LocalDate today = LocalDate.now();
+System.out.println(today);
+
+
+6. Nashorn JavaScript Engine
+- Provided improved JavaScript support within Java applications.
+
+
+
+
