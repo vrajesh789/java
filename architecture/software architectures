@@ -4,4 +4,11 @@ retry stratigy - http calls (Idempotent http methods (get,put,delete)) reccomene
 
 saga design pattern - (event driven communication)
 
+low latency
+
+
+build tools , maven, gradle
+
+
+
 
