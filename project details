@@ -1,0 +1,12 @@
+CITI - remap 
+-------------------------------------------------------------------------------------------------------------------------------------------
+oracle(strategic) ledger remap
+
+fields - csi (common source identifier), accounting period (current , open)
+
+sl - taking data from different sources - local key values to global key values - L2G engine. based on rules engine. (map hub database)
+
+so finally bringing standard ledger data and loading to oracle saas.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
