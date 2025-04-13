@@ -1,1 +1,8 @@
 
+keytool
+
+truststore, client store, jks, p12.certificate chain.
+
+ref:
+
+https://www.baeldung.com/tag/ssl
