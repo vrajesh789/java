@@ -3,3 +3,6 @@ singleton
 prototype
 
 
+circute breaker pattern vs retry pattern 
+ref: https://www.baeldung.com/cs/microservices-circuit-breaker-pattern
+
