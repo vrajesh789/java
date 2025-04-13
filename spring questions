@@ -16,4 +16,6 @@ https://www.baeldung.com/spring-boot-set-default-timezone
 logging http req and res 
 ref: https://www.baeldung.com/spring-logbook-http-logging
 
+spring application observability - health check, actuator endpoints. logging
+
 
