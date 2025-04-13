@@ -2,4 +2,6 @@ database design in microservices
 
 retry stratigy - http calls (Idempotent http methods (get,put,delete)) reccomeneded
 
+saga design pattern - (event driven communication)
+
 
