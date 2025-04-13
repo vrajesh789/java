@@ -18,4 +18,6 @@ ref: https://www.baeldung.com/spring-logbook-http-logging
 
 spring application observability - health check, actuator endpoints. logging
 
+log4j2 vs logback
+
 
