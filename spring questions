@@ -20,4 +20,8 @@ spring application observability - health check, actuator endpoints. logging
 
 log4j2 vs logback
 
+vulnerability scan - sonarqube
+
+
+
 
