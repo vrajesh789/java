@@ -3,6 +3,11 @@ keytool
 
 truststore, client store, jks, p12.certificate chain.
 
+keystore vs truststore?
+
+
 ref:
 
 https://www.baeldung.com/tag/ssl
+
+https://www.baeldung.com/java-keystore-truststore-difference
