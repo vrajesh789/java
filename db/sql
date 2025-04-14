@@ -1,3 +1,109 @@
 https://www.baeldung.com/cs/sharding
 
+1. How do you find the nth highest salary in a table?
+Answer: Using the LIMIT clause with ORDER BY:
+SELECT DISTINCT salary 
+FROM employees 
+ORDER BY salary DESC 
+LIMIT n-1, 1;
+
+
+Alternatively, using a subquery:
+SELECT MAX(salary) 
+FROM employees 
+WHERE salary < (SELECT MAX(salary) FROM employees);
+
+
+
+2. What is the difference between WHERE and HAVING clauses?
+Answer:
+- WHERE: Filters rows before aggregation.
+- HAVING: Filters groups after aggregation. Example:
+
+SELECT department, AVG(salary) 
+FROM employees 
+WHERE department = 'Sales' 
+GROUP BY department 
+HAVING AVG(salary) > 50000;
+
+
+
+3. How do you optimize a slow-running query?
+Answer:
+- Use indexes on frequently queried columns.
+- Avoid SELECT *; specify required columns.
+- Use EXPLAIN to analyze query execution plans.
+- Optimize joins by ensuring indexed columns are used in ON conditions.
+- Avoid unnecessary subqueries; use JOIN instead.
+
+
+4. What are the different types of joins in SQL?
+Answer:
+- INNER JOIN: Returns matching rows from both tables.
+- LEFT JOIN: Returns all rows from the left table and matching rows from the right table.
+- RIGHT JOIN: Returns all rows from the right table and matching rows from the left table.
+- FULL JOIN: Returns all rows from both tables, with NULL for unmatched rows.
+- CROSS JOIN: Produces a Cartesian product of both tables.
+
+
+5. How do you handle duplicate records in a table?
+Answer: To find duplicates:
+SELECT column1, COUNT(*) 
+FROM table_name 
+GROUP BY column1 
+HAVING COUNT(*) > 1;
+
+
+To delete duplicates:
+DELETE FROM employees 
+WHERE id NOT IN (
+    SELECT MIN(id) 
+    FROM employees 
+    GROUP BY column1
+);
+
+
+
+6. What is a window function, and how is it used?
+Answer: A window function performs calculations across a set of rows related to the current row. Example:
+SELECT employee_id, salary, 
+       RANK() OVER (PARTITION BY department ORDER BY salary DESC) AS rank 
+FROM employees;
+
+
+This ranks employees by salary within each department.
+
+7. What is the difference between UNION and UNION ALL?
+Answer:
+- UNION: Combines results from two queries and removes duplicates.
+- UNION ALL: Combines results from two queries without removing duplicates.
+
+
+8. How do you implement indexing, and what are its types?
+Answer: Indexes improve query performance by reducing data retrieval time. Types:
+- Clustered Index: Sorts and stores data rows in the table based on key values.
+- Non-Clustered Index: Creates a separate structure for the index.
+- Unique Index: Ensures all values in the indexed column are unique.
+- Full-Text Index: Used for text search.
+
+
+9. How do you ensure data integrity in a database?
+Answer:
+- Use primary keys to uniquely identify rows.
+- Use foreign keys to enforce referential integrity.
+- Define constraints like NOT NULL, UNIQUE, and CHECK.
+- Implement triggers for custom validation.
+
+
+10. What are ACID properties in a database?
+Answer:
+- Atomicity: Ensures all operations in a transaction are completed or none are.
+- Consistency: Ensures the database remains in a valid state after a transaction.
+- Isolation: Ensures transactions do not interfere with each other.
+- Durability: Ensures committed transactions are saved permanently.
+
+
+
+
+
 
